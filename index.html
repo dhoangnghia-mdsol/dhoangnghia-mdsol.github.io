@@ -86,18 +86,19 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        height: 160px;
+        height: 5em;
         overflow: hidden;
         font-family: "Lato", sans-serif;
-        font-size: 35px;
-        line-height: 40px;
+        font-size: 0.5em;
+        line-height: 1em;
         color: #ecf0f1;
+        text-align: center;
       }
       .content__container {
         font-weight: 600;
         overflow: hidden;
-        height: 40px;
-        padding: 0 40px;
+        height: 1em;
+        padding: 0 1em;
       }
       .content__container:before {
         content: "[";
@@ -113,8 +114,8 @@
         position: absolute;
         top: 0;
         color: #12b886;
-        font-size: 42px;
-        line-height: 40px;
+        font-size: 1em;
+        line-height: 1em;
         -webkit-animation-name: opacity;
         -webkit-animation-duration: 2s;
         -webkit-animation-iteration-count: infinite;
@@ -132,7 +133,7 @@
       }
       .content__container__list {
         margin-top: 0;
-        padding-left: 240px;
+        padding-left: 7em;
         text-align: left;
         list-style: none;
         -webkit-animation-name: change;
@@ -143,8 +144,9 @@
         animation-iteration-count: infinite;
       }
       .content__container__list__item {
-        line-height: 40px;
+        line-height: 1em;
         margin: 0;
+        overflow: hidden;
       }
 
       @-webkit-keyframes opacity {
@@ -193,6 +195,33 @@
         }
         75% {
           transform: translate3d(0, -33.33%, 0);
+        }
+      }
+
+      .content__container__text_small {
+        font-size: 0.5em;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        font-weight: 100;
+        font-family: "Lato", sans-serif;
+        width: 100%;
+        color: #ecf0f1;
+        transform: translateY(-5em);
+      }
+
+      @media only screen and (max-width: 600px) {
+        .content__container__text_small {
+          display: block;
+        }
+        .content .content__container__text {
+          display: none;
+        }
+        .content__container__list {
+          padding: 0;
+        }
+        .content__container__list__item {
+          text-align: center;
         }
       }
     </style>
@@ -288,6 +317,7 @@
       <use class="text" xlink:href="#s-text"></use>
       <use class="text" xlink:href="#s-text"></use>
     </svg>
+    <p class="content__container__text_small">We care for</p>
     <div class="content">
       <div class="content__container">
         <p class="content__container__text">We care for</p>
